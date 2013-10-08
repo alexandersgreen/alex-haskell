@@ -1,0 +1,1951 @@
+<?xml version="1.0"?>
+<glade-interface>
+  <!-- interface-requires gtk+ 2.16 -->
+  <!-- interface-naming-policy project-wide -->
+  <widget class="GtkWindow" id="sudoku">
+    <property name="title" translatable="yes">Sudoku GUI</property>
+    <child>
+      <widget class="GtkVBox" id="vbox1">
+        <property name="visible">True</property>
+        <child>
+          <widget class="GtkMenuBar" id="menubar">
+            <property name="visible">True</property>
+            <child>
+              <widget class="GtkMenuItem" id="filemenu">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">_File</property>
+                <property name="use_underline">True</property>
+                <child>
+                  <widget class="GtkMenu" id="menu1">
+                    <property name="visible">True</property>
+                    <child>
+                      <widget class="GtkImageMenuItem" id="solvemenu">
+                        <property name="label" translatable="yes">Solve</property>
+                        <property name="visible">True</property>
+                        <property name="use_stock">False</property>
+                        <child internal-child="image">
+                          <widget class="GtkImage" id="image82">
+                            <property name="visible">True</property>
+                            <property name="stock">gtk-yes</property>
+                          </widget>
+                        </child>
+                      </widget>
+                    </child>
+                    <child>
+                      <widget class="GtkSeparatorMenuItem" id="separatormenuitem1">
+                        <property name="visible">True</property>
+                      </widget>
+                    </child>
+                    <child>
+                      <widget class="GtkImageMenuItem" id="quitmenu">
+                        <property name="label">gtk-quit</property>
+                        <property name="visible">True</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                      </widget>
+                    </child>
+                  </widget>
+                </child>
+              </widget>
+            </child>
+            <child>
+              <widget class="GtkMenuItem" id="helpmenu">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">_Help</property>
+                <property name="use_underline">True</property>
+                <child>
+                  <widget class="GtkMenu" id="menu2">
+                    <property name="visible">True</property>
+                    <child>
+                      <widget class="GtkImageMenuItem" id="aboutmenu">
+                        <property name="label">gtk-about</property>
+                        <property name="visible">True</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                      </widget>
+                    </child>
+                  </widget>
+                </child>
+              </widget>
+            </child>
+          </widget>
+          <packing>
+            <property name="expand">False</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkHBox" id="hbox1">
+            <property name="visible">True</property>
+            <child>
+              <widget class="GtkVBox" id="vbox2">
+                <property name="visible">True</property>
+                <child>
+                  <widget class="GtkButton" id="1button">
+                    <property name="label" translatable="yes">1</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                  </widget>
+                  <packing>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkButton" id="2button">
+                    <property name="label" translatable="yes">2</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                  </widget>
+                  <packing>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkButton" id="3button">
+                    <property name="label" translatable="yes">3</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                  </widget>
+                  <packing>
+                    <property name="position">2</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkButton" id="4button">
+                    <property name="label" translatable="yes">4</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                  </widget>
+                  <packing>
+                    <property name="position">3</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkButton" id="5button">
+                    <property name="label" translatable="yes">5</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                  </widget>
+                  <packing>
+                    <property name="position">4</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkButton" id="6button">
+                    <property name="label" translatable="yes">6</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                  </widget>
+                  <packing>
+                    <property name="position">5</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkButton" id="7button">
+                    <property name="label" translatable="yes">7</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                  </widget>
+                  <packing>
+                    <property name="position">6</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkButton" id="8button">
+                    <property name="label" translatable="yes">8</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                  </widget>
+                  <packing>
+                    <property name="position">7</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkButton" id="9button">
+                    <property name="label" translatable="yes">9</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                  </widget>
+                  <packing>
+                    <property name="position">8</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkButton" id="clearbutton">
+                    <property name="label" translatable="yes">Clear</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                  </widget>
+                  <packing>
+                    <property name="position">9</property>
+                  </packing>
+                </child>
+              </widget>
+              <packing>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkTable" id="sudokutable">
+                <property name="width_request">350</property>
+                <property name="height_request">350</property>
+                <property name="visible">True</property>
+                <property name="border_width">4</property>
+                <property name="n_rows">3</property>
+                <property name="n_columns">3</property>
+                <child>
+                  <widget class="GtkTable" id="tl">
+                    <property name="visible">True</property>
+                    <property name="border_width">2</property>
+                    <property name="n_rows">3</property>
+                    <property name="n_columns">3</property>
+                    <child>
+                      <widget class="GtkImage" id="tltl">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltm">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="right_attach">2</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltr">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">2</property>
+                        <property name="right_attach">3</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tlml">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="top_attach">1</property>
+                        <property name="bottom_attach">2</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tlmm">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="right_attach">2</property>
+                        <property name="top_attach">1</property>
+                        <property name="bottom_attach">2</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tlmr">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">2</property>
+                        <property name="right_attach">3</property>
+                        <property name="top_attach">1</property>
+                        <property name="bottom_attach">2</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tlbl">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="top_attach">2</property>
+                        <property name="bottom_attach">3</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tlbm">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="right_attach">2</property>
+                        <property name="top_attach">2</property>
+                        <property name="bottom_attach">3</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tlbr">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">2</property>
+                        <property name="right_attach">3</property>
+                        <property name="top_attach">2</property>
+                        <property name="bottom_attach">3</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                  </widget>
+                  <packing>
+                    <property name="x_padding">2</property>
+                    <property name="y_padding">2</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkTable" id="tm">
+                    <property name="visible">True</property>
+                    <property name="border_width">2</property>
+                    <property name="n_rows">3</property>
+                    <property name="n_columns">3</property>
+                    <child>
+                      <widget class="GtkImage" id="tltl9">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl10">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="right_attach">2</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl11">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">2</property>
+                        <property name="right_attach">3</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl12">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="top_attach">1</property>
+                        <property name="bottom_attach">2</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl13">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="right_attach">2</property>
+                        <property name="top_attach">1</property>
+                        <property name="bottom_attach">2</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl14">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">2</property>
+                        <property name="right_attach">3</property>
+                        <property name="top_attach">1</property>
+                        <property name="bottom_attach">2</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl15">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="top_attach">2</property>
+                        <property name="bottom_attach">3</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl16">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="right_attach">2</property>
+                        <property name="top_attach">2</property>
+                        <property name="bottom_attach">3</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl17">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">2</property>
+                        <property name="right_attach">3</property>
+                        <property name="top_attach">2</property>
+                        <property name="bottom_attach">3</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                  </widget>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="right_attach">2</property>
+                    <property name="x_padding">2</property>
+                    <property name="y_padding">2</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkTable" id="tr">
+                    <property name="visible">True</property>
+                    <property name="border_width">2</property>
+                    <property name="n_rows">3</property>
+                    <property name="n_columns">3</property>
+                    <child>
+                      <widget class="GtkImage" id="tltl18">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl19">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="right_attach">2</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl20">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">2</property>
+                        <property name="right_attach">3</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl21">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="top_attach">1</property>
+                        <property name="bottom_attach">2</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl22">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="right_attach">2</property>
+                        <property name="top_attach">1</property>
+                        <property name="bottom_attach">2</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl23">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">2</property>
+                        <property name="right_attach">3</property>
+                        <property name="top_attach">1</property>
+                        <property name="bottom_attach">2</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl24">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="top_attach">2</property>
+                        <property name="bottom_attach">3</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl25">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="right_attach">2</property>
+                        <property name="top_attach">2</property>
+                        <property name="bottom_attach">3</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl26">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">2</property>
+                        <property name="right_attach">3</property>
+                        <property name="top_attach">2</property>
+                        <property name="bottom_attach">3</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                  </widget>
+                  <packing>
+                    <property name="left_attach">2</property>
+                    <property name="right_attach">3</property>
+                    <property name="x_padding">2</property>
+                    <property name="y_padding">2</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkTable" id="ml">
+                    <property name="visible">True</property>
+                    <property name="border_width">2</property>
+                    <property name="n_rows">3</property>
+                    <property name="n_columns">3</property>
+                    <child>
+                      <widget class="GtkImage" id="tltl27">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl28">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="right_attach">2</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl29">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">2</property>
+                        <property name="right_attach">3</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl30">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="top_attach">1</property>
+                        <property name="bottom_attach">2</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl31">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="right_attach">2</property>
+                        <property name="top_attach">1</property>
+                        <property name="bottom_attach">2</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl32">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">2</property>
+                        <property name="right_attach">3</property>
+                        <property name="top_attach">1</property>
+                        <property name="bottom_attach">2</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl33">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="top_attach">2</property>
+                        <property name="bottom_attach">3</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl34">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="right_attach">2</property>
+                        <property name="top_attach">2</property>
+                        <property name="bottom_attach">3</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl35">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">2</property>
+                        <property name="right_attach">3</property>
+                        <property name="top_attach">2</property>
+                        <property name="bottom_attach">3</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                  </widget>
+                  <packing>
+                    <property name="top_attach">1</property>
+                    <property name="bottom_attach">2</property>
+                    <property name="x_padding">2</property>
+                    <property name="y_padding">2</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkTable" id="mm">
+                    <property name="visible">True</property>
+                    <property name="border_width">2</property>
+                    <property name="n_rows">3</property>
+                    <property name="n_columns">3</property>
+                    <child>
+                      <widget class="GtkImage" id="tltl36">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl37">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="right_attach">2</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl38">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">2</property>
+                        <property name="right_attach">3</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl39">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="top_attach">1</property>
+                        <property name="bottom_attach">2</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl40">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="right_attach">2</property>
+                        <property name="top_attach">1</property>
+                        <property name="bottom_attach">2</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl41">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">2</property>
+                        <property name="right_attach">3</property>
+                        <property name="top_attach">1</property>
+                        <property name="bottom_attach">2</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl42">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="top_attach">2</property>
+                        <property name="bottom_attach">3</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl43">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="right_attach">2</property>
+                        <property name="top_attach">2</property>
+                        <property name="bottom_attach">3</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl44">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">2</property>
+                        <property name="right_attach">3</property>
+                        <property name="top_attach">2</property>
+                        <property name="bottom_attach">3</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                  </widget>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="right_attach">2</property>
+                    <property name="top_attach">1</property>
+                    <property name="bottom_attach">2</property>
+                    <property name="x_padding">2</property>
+                    <property name="y_padding">2</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkTable" id="mr">
+                    <property name="visible">True</property>
+                    <property name="border_width">2</property>
+                    <property name="n_rows">3</property>
+                    <property name="n_columns">3</property>
+                    <child>
+                      <widget class="GtkImage" id="tltl45">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl46">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="right_attach">2</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl47">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">2</property>
+                        <property name="right_attach">3</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl48">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="top_attach">1</property>
+                        <property name="bottom_attach">2</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl49">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="right_attach">2</property>
+                        <property name="top_attach">1</property>
+                        <property name="bottom_attach">2</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl50">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">2</property>
+                        <property name="right_attach">3</property>
+                        <property name="top_attach">1</property>
+                        <property name="bottom_attach">2</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl51">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="top_attach">2</property>
+                        <property name="bottom_attach">3</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl52">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="right_attach">2</property>
+                        <property name="top_attach">2</property>
+                        <property name="bottom_attach">3</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl53">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">2</property>
+                        <property name="right_attach">3</property>
+                        <property name="top_attach">2</property>
+                        <property name="bottom_attach">3</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                  </widget>
+                  <packing>
+                    <property name="left_attach">2</property>
+                    <property name="right_attach">3</property>
+                    <property name="top_attach">1</property>
+                    <property name="bottom_attach">2</property>
+                    <property name="x_padding">2</property>
+                    <property name="y_padding">2</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkTable" id="bl">
+                    <property name="visible">True</property>
+                    <property name="border_width">2</property>
+                    <property name="n_rows">3</property>
+                    <property name="n_columns">3</property>
+                    <child>
+                      <widget class="GtkImage" id="tltl54">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl55">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="right_attach">2</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl56">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">2</property>
+                        <property name="right_attach">3</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl57">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="top_attach">1</property>
+                        <property name="bottom_attach">2</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl58">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="right_attach">2</property>
+                        <property name="top_attach">1</property>
+                        <property name="bottom_attach">2</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl59">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">2</property>
+                        <property name="right_attach">3</property>
+                        <property name="top_attach">1</property>
+                        <property name="bottom_attach">2</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl60">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="top_attach">2</property>
+                        <property name="bottom_attach">3</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl61">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="right_attach">2</property>
+                        <property name="top_attach">2</property>
+                        <property name="bottom_attach">3</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl62">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">2</property>
+                        <property name="right_attach">3</property>
+                        <property name="top_attach">2</property>
+                        <property name="bottom_attach">3</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                  </widget>
+                  <packing>
+                    <property name="top_attach">2</property>
+                    <property name="bottom_attach">3</property>
+                    <property name="x_padding">2</property>
+                    <property name="y_padding">2</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkTable" id="bm">
+                    <property name="visible">True</property>
+                    <property name="border_width">2</property>
+                    <property name="n_rows">3</property>
+                    <property name="n_columns">3</property>
+                    <child>
+                      <widget class="GtkImage" id="tltl63">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl64">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="right_attach">2</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl65">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">2</property>
+                        <property name="right_attach">3</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl66">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="top_attach">1</property>
+                        <property name="bottom_attach">2</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl67">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="right_attach">2</property>
+                        <property name="top_attach">1</property>
+                        <property name="bottom_attach">2</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl68">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">2</property>
+                        <property name="right_attach">3</property>
+                        <property name="top_attach">1</property>
+                        <property name="bottom_attach">2</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl69">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="top_attach">2</property>
+                        <property name="bottom_attach">3</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl70">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="right_attach">2</property>
+                        <property name="top_attach">2</property>
+                        <property name="bottom_attach">3</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl71">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">2</property>
+                        <property name="right_attach">3</property>
+                        <property name="top_attach">2</property>
+                        <property name="bottom_attach">3</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                  </widget>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="right_attach">2</property>
+                    <property name="top_attach">2</property>
+                    <property name="bottom_attach">3</property>
+                    <property name="x_padding">2</property>
+                    <property name="y_padding">2</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkTable" id="br">
+                    <property name="visible">True</property>
+                    <property name="border_width">2</property>
+                    <property name="n_rows">3</property>
+                    <property name="n_columns">3</property>
+                    <child>
+                      <widget class="GtkImage" id="tltl72">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl73">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="right_attach">2</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl74">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">2</property>
+                        <property name="right_attach">3</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl75">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="top_attach">1</property>
+                        <property name="bottom_attach">2</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl76">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="right_attach">2</property>
+                        <property name="top_attach">1</property>
+                        <property name="bottom_attach">2</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl77">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">2</property>
+                        <property name="right_attach">3</property>
+                        <property name="top_attach">1</property>
+                        <property name="bottom_attach">2</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl78">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="top_attach">2</property>
+                        <property name="bottom_attach">3</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl79">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="right_attach">2</property>
+                        <property name="top_attach">2</property>
+                        <property name="bottom_attach">3</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="tltl80">
+                        <property name="width_request">30</property>
+                        <property name="height_request">30</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="pixel_size">30</property>
+                        <property name="icon_name">applications-games</property>
+                        <property name="icon-size">6</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">2</property>
+                        <property name="right_attach">3</property>
+                        <property name="top_attach">2</property>
+                        <property name="bottom_attach">3</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">2</property>
+                      </packing>
+                    </child>
+                  </widget>
+                  <packing>
+                    <property name="left_attach">2</property>
+                    <property name="right_attach">3</property>
+                    <property name="top_attach">2</property>
+                    <property name="bottom_attach">3</property>
+                    <property name="x_padding">2</property>
+                    <property name="y_padding">2</property>
+                  </packing>
+                </child>
+              </widget>
+              <packing>
+                <property name="expand">False</property>
+                <property name="padding">4</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkTextView" id="textview">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="pixels_above_lines">1</property>
+                <property name="pixels_below_lines">1</property>
+                <property name="editable">False</property>
+                <property name="wrap_mode">word</property>
+                <property name="text" translatable="yes">This box will contain the internal representation of the sudoku board.</property>
+              </widget>
+              <packing>
+                <property name="position">2</property>
+              </packing>
+            </child>
+          </widget>
+          <packing>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkVBox" id="vbox3">
+            <property name="visible">True</property>
+            <child>
+              <widget class="GtkButton" id="solvebutton">
+                <property name="label" translatable="yes">Solve</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+              </widget>
+              <packing>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkLabel" id="statuslabel">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">Status: OK</property>
+              </widget>
+              <packing>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </widget>
+          <packing>
+            <property name="position">2</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+  <widget class="GtkDialog" id="dialog">
+    <property name="width_request">100</property>
+    <property name="height_request">50</property>
+    <property name="double_buffered">False</property>
+    <property name="border_width">5</property>
+    <property name="title" translatable="yes">Error</property>
+    <property name="type_hint">normal</property>
+    <property name="has_separator">False</property>
+    <child internal-child="vbox">
+      <widget class="GtkVBox" id="dialog-vbox2">
+        <property name="visible">True</property>
+        <property name="spacing">2</property>
+        <child>
+          <widget class="GtkLabel" id="label1">
+            <property name="visible">True</property>
+            <property name="label" translatable="yes">Error: Sudoku is not Solvable</property>
+          </widget>
+          <packing>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child internal-child="action_area">
+          <widget class="GtkHButtonBox" id="dialog-action_area2">
+            <property name="visible">True</property>
+            <property name="layout_style">end</property>
+            <child>
+              <widget class="GtkButton" id="okbutton">
+                <property name="label">gtk-ok</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_stock">True</property>
+              </widget>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+          </widget>
+          <packing>
+            <property name="expand">False</property>
+            <property name="pack_type">end</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+  <widget class="GtkDialog" id="aboutdialog">
+    <property name="border_width">5</property>
+    <property name="type_hint">normal</property>
+    <property name="has_separator">False</property>
+    <child internal-child="vbox">
+      <widget class="GtkVBox" id="dialog-vbox3">
+        <property name="visible">True</property>
+        <property name="spacing">2</property>
+        <child>
+          <widget class="GtkVBox" id="vbox4">
+            <property name="visible">True</property>
+            <child>
+              <widget class="GtkLabel" id="aboutlabel">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">Sudoku GUI</property>
+              </widget>
+              <packing>
+                <property name="padding">3</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkLabel" id="label4">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">by Alexander S. Green
+using Sudoku.lhs by Graham Hutton</property>
+                <property name="justify">center</property>
+              </widget>
+              <packing>
+                <property name="padding">3</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkLabel" id="label5">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">This software is released without any support</property>
+              </widget>
+              <packing>
+                <property name="padding">3</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+          </widget>
+          <packing>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child internal-child="action_area">
+          <widget class="GtkHButtonBox" id="dialog-action_area1">
+            <property name="visible">True</property>
+            <property name="layout_style">end</property>
+            <child>
+              <widget class="GtkButton" id="closebutton">
+                <property name="label">gtk-close</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_stock">True</property>
+              </widget>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+          </widget>
+          <packing>
+            <property name="expand">False</property>
+            <property name="pack_type">end</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+</glade-interface>
